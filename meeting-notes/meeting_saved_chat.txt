@@ -50,3 +50,27 @@ TODO:
 3. Correlate to energy
 4. Run core ranges from 0 -> all; with taskset and cpufreq
 5. Measure everything and graph it for every page
+
+
+
+>cpufreq-info
+min: 1.00 GHz
+max: 4.00
+steps: ~100-200 MHz
+
+(core range)x(steps)x(pages) = note energy, PLT : PLOT CORRELATION
+
+pidof chrome
+
+taskset -a -c 0-2 -p `pidof chrome`
+
+
+Go through range {0} ... {0-5}
+taskset -a -cp 0-2 122389
+
+// Vary this as needed
+sudo perf stat -e power/energy-pkg/ -I 10
+
+0. Configure 
+1. start timer & start page load for given configuration
+2. sudo perf stat -e power/energy-pkg/ -I 20 -a
