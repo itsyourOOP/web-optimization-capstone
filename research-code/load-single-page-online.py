@@ -32,9 +32,9 @@ except:
 #     print("cannot connect to web server")
 #     sys.exit(1)
 
-if resp.status_code != 200:
-    print("web server is not working")
-    sys.exit(1)
+# if resp.status_code != 200:
+#     print("web server is not working")
+#     sys.exit(1)
 
 chrome = PyChromeDevTools.ChromeInterface()
 chrome.Network.enable()
