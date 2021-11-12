@@ -1,0 +1,52 @@
+
+	ssh cc@<IP_ADDRESS> -i <path_file_name/web_gov_new.pem>
+	https://www.dropbox.com/s/wrnlatf545c4ucf/web_gov_new.pem
+
+	129.114.109.221
+	ssh cc@129.114.109.221 -i web_gov_new.pem
+
+	https://www.dropbox.com/sh/bo4vz4g50jwyncn/AADbeMsfxNYkLGZeShg_i3lIa?dl=0
+
+	https://www.dropbox.com/personal/research-code?preview=load-single-page-online.py
+
+	https://www.dropbox.com/personal/research-code?preview=run-chrome.sh
+
+	https://www.dropbox.com/personal/research-code?preview=taskset.py
+
+	import PyChromeDevTools
+
+	chromium-browser
+	chromium-chromedriver
+	cc@webgov:~$ sudo apt install chromium-browser
+
+	Real IP:
+	129.114.109.221
+
+	Local IP: 10.52.1.251
+
+	./chrome78/chrome --no-zygote --no-sandbox --headless --disable-gpu --remote-debugging-port=9222 --renderer-process-limit=1 --disable-cache --disable-application-cache --disk-cache-size=0
+	
+	Screen
+	CTRL+A+N: NEXT WINDOW
+	CTRL+A+D: DETACH
+	CTRL+A+C: CREATE
+	>Screen -r : resume
+
+
+	cc@webgov:~$ sudo apt install linux-tools-common
+	cc@webgov:~$ sudo perf stat -e power/energy-pkg/
+
+
+page-loader 	-> 		[chrome process]
+	PLT			<-				|
+	{alter core stuff}			|
+		------>				[Server]
+
+CPU-Freq
+
+TODO:
+1. Run page load and timer start in parallel
+2. Stop page load
+3. Correlate to energy
+4. Run core ranges from 0 -> all; with taskset and cpufreq
+5. Measure everything and graph it for every page
