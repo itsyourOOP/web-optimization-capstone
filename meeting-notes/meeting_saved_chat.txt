@@ -58,7 +58,10 @@ min: 1.00 GHz
 max: 4.00
 steps: ~100-200 MHz
 
-(core range)x(steps)x(pages) = note energy, PLT : PLOT CORRELATION
+(core range) 		// taskset -a -cp 0-2 122389
+x(steps)			// cpufreq-set -f 1.xx-4.xx GHz
+x(pages) 
+= note energy, PLT : PLOT CORRELATION
 
 pidof chrome
 
