@@ -1,0 +1,93 @@
+
+	ssh cc@<IP_ADDRESS> -i <path_file_name/web_gov_new.pem>
+	https://www.dropbox.com/s/wrnlatf545c4ucf/web_gov_new.pem
+
+	129.114.109.221
+	ssh cc@129.114.109.221 -i web_gov_new.pem
+
+	https://www.dropbox.com/sh/bo4vz4g50jwyncn/AADbeMsfxNYkLGZeShg_i3lIa?dl=0
+
+	https://www.dropbox.com/personal/research-code?preview=load-single-page-online.py
+
+	https://www.dropbox.com/personal/research-code?preview=run-chrome.sh
+
+	https://www.dropbox.com/personal/research-code?preview=taskset.py
+
+	import PyChromeDevTools
+
+	chromium-browser
+	chromium-chromedriver
+	cc@webgov:~$ sudo apt install chromium-browser
+
+	Real IP:
+	129.114.109.221
+
+	Local IP: 10.52.1.251
+
+	./chrome78/chrome --no-zygote --no-sandbox --headless --disable-gpu --remote-debugging-port=9222 --renderer-process-limit=1 --disable-cache --disable-application-cache --disk-cache-size=0
+	
+	Screen
+	CTRL+A+N: NEXT WINDOW
+	CTRL+A+D: DETACH
+	CTRL+A+C: CREATE
+	>Screen -r : resume
+
+
+	cc@webgov:~$ sudo apt install linux-tools-common
+	cc@webgov:~$ sudo perf stat -e power/energy-pkg/
+
+
+page-loader 	-> 		[chrome process]
+	PLT			<-				|
+	{alter core stuff}			|
+		------>				[Server]
+
+CPU-Freq
+
+TODO:
+1. Run page load and timer start in parallel
+2. Stop page load
+3. Correlate to energy
+4. Run core ranges from 0 -> all; with taskset and cpufreq
+5. Measure everything and graph it for every page
+
+
+
+>cpufreq-info
+min: 1.00 GHz
+max: 4.00
+steps: ~100-200 MHz
+
+(core range) 		// taskset -a -cp 0-2 122389
+x(steps)			// cpufreq-set -f 1.xx-4.xx GHz
+x(pages) 
+= note energy, PLT : PLOT CORRELATION
+
+pidof chrome
+
+taskset -a -c 0-2 -p `pidof chrome`
+
+
+Go through range {0} ... {0-5}
+taskset -a -cp 0-2 122389
+
+// Vary this as needed
+sudo perf stat -e power/energy-pkg/ -I 10
+
+0. Configure 
+for -cp {0, 0-1,...0-5}
+	// taskset -a -cp 0-2 122389
+	
+	current_freq = 2.00
+	do:
+		// cpufreq-set -f 1.xx-4.xx GHz
+		// 1. start timer & start page load for given configuration
+			// 
+		// 2. sudo perf stat -e power/energy-pkg/ -I 20 -a
+
+		current freq += 0.20
+	while current_freq <= 4.00:
+	// cpufreq-set -f 1.xx-4.xx GHz
+
+1. start timer & start page load for given configuration
+

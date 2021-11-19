@@ -2,7 +2,10 @@
 __pycache__/
 *.py[cod]
 *$py.class
-
+.DS_Store
+Chameleon/
+cc@129.114.109.142/
+research-code/webgov.ssh
 # C extensions
 *.so
 
