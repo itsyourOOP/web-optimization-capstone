@@ -51,9 +51,8 @@ for i in range(k):
 
     site = 'http://www.'+page+'.com/'
 
-    start_time = time.time()
-
     print("Starting navigation on site:", site)
+    start_time = time.time()
     return_value = chrome.Page.navigate(url=site)
     chrome.wait_event("Page.loadEventFired", timeout=60)
 
