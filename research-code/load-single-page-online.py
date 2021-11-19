@@ -21,6 +21,11 @@ sites = {'amazon': 'http://www.amazon.com/',
 
 try:
     page = str(sys.argv[1])
+    try:
+        test = str(sys.argv[2])
+        print(test)
+    except:
+        print('non-arg')
 except:
     print("Need page as paramater")
     sys.exit(1)
