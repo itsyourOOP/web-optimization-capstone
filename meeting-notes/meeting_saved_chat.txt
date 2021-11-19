@@ -75,5 +75,19 @@ taskset -a -cp 0-2 122389
 sudo perf stat -e power/energy-pkg/ -I 10
 
 0. Configure 
+for -cp {0, 0-1,...0-5}
+	// taskset -a -cp 0-2 122389
+	
+	current_freq = 2.00
+	do:
+		// cpufreq-set -f 1.xx-4.xx GHz
+		// 1. start timer & start page load for given configuration
+			// 
+		// 2. sudo perf stat -e power/energy-pkg/ -I 20 -a
+
+		current freq += 0.20
+	while current_freq <= 4.00:
+	// cpufreq-set -f 1.xx-4.xx GHz
+
 1. start timer & start page load for given configuration
-2. sudo perf stat -e power/energy-pkg/ -I 20 -a
+
