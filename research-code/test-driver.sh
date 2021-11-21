@@ -1,3 +1,1 @@
 # ./run-chrome.sh
-
-load-
