@@ -20,12 +20,14 @@ sites = {'amazon': 'http://tucunare.cs.pitt.edu:8080/amazon/www.amazon.com/index
 
 try:
     page = str(sys.argv[1])
+    print("Got page!")
 except:
     print("Need page as paramater")
     sys.exit(1)
 
 # check if web server is up and running
 try:
+    print("Time to check this page once again")
     resp = requests.get('http://tucunare.cs.pitt.edu:8080/')
 except:
     print("cannot connect to web server")
