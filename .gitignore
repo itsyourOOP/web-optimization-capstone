@@ -6,7 +6,7 @@ __pycache__/
 Chameleon/
 cc@129.114.109.142/
 research-code/webgov.ssh
-research-code/webgov_latest.pem
+*.pem
 # C extensions
 *.so
 
