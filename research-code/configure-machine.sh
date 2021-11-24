@@ -1,11 +1,5 @@
 #!/bin/bash
 
-# for ((i = 1000; i < 4000; i += 200)); do
-# 	echo "test $i"
-# 	cpupower frequency-set -d $i
-# 	cpupower frequency-set -u $i
-# done
-
 POSITIONAL=()
 while [[ $# -gt 0 ]]; do
 	key="$1"
@@ -36,14 +30,4 @@ while [[ $# -gt 0 ]]; do
 		;;
 	esac
 done
-echo "NUMBER OF CORES  = ${CORES}"
-echo "START FREQ  = ${START_FREQ}"
-echo "END FREQ  = ${END_FREQ}"
-
-./configure-machine.sh -c ${CORES} &
-./configure-machine.sh -c 91
-
-if [[ -n $1 ]]; then
-	echo "Last line of file specified as non-opt/last argument:"
-	tail -1 $1
-fi
+echo "MACHINE CONFIGURED WITH ${CORES} CORES"
