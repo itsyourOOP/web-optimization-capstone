@@ -6,7 +6,7 @@ import sys
 import requests
 
 sites = {'amazon': 'http://tucunare.cs.pitt.edu:8080/amazon/www.amazon.com/index.html',
-         'bbc': 'http://tucunare.cs.pitt.edu:8080/bbc/www.bbc.co.uk/index.html',
+         'bbc': 'http://tucunare.cs.pitt.edu:8080/bbc/www.bbgc.co.uk/index.html',
          'cnn': 'http://tucunare.cs.pitt.edu:8080/cnn/www.cnn.com/index.html',
          'craigslist': 'http://tucunare.cs.pitt.edu:8080/craigslist/newyork.craigslist.org/index.html',
          'ebay': 'http://tucunare.cs.pitt.edu:8080/ebay/www.ebay.com/index.html',
